@@ -13,7 +13,7 @@ export default function thanksCard({ setThanks }) {
         Monitor Riser worldwide. You will get an email once our campaign is
         completed.
       </p>
-      <Button label={"GotIt"} doThis={setThanks} value={false} />
+      <Button label={"Got It!"} doThis={setThanks} value={false} />
     </div>
   );
 }
