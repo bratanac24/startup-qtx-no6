@@ -7,13 +7,13 @@ import Statistics from "../statistics/Statistics";
 import About from "../about/About";
 import Alert from "../alert/Alert";
 
-export default function MainContent() {
+export default function MainContent({ alert, setAlert }) {
   return (
     <div className="content">
       <div className="content-box">
-        <Stats />
+        <Stats alert={alert} setAlert={setAlert} />
         <Statistics />
-        <About />
+        <About alert={alert} setAlert={setAlert} />
       </div>
     </div>
   );

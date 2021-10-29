@@ -1,0 +1,98 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.radio {
+  padding: 10px;
+  margin: 35px 28px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #0005;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #0005;
+  border-radius: 50px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.radio::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 20px 20px #3cb3ab;
+}
+.radio:checked::before {
+  transform: scale(1);
+}
+.info {
+  margin-left: 24px;
+}
+.description {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.info-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  h3 {
+    margin: 0 17px 0 0;
+  }
+}
+.amount {
+  margin: -48px;
+  margin-top: 30px;
+  padding: 30px 30px;
+  border-top: solid 1px #0005;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.pledgeAmount {
+  display: flex;
+  flex-direction: row;
+}
+.people-num {
+  position: absolute;
+  top: 30px;
+  right: 28px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+.people-num span {
+  color: #0005;
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 8px;
+}
+/*.pledgeAmount button {
+  padding: 5px 20px;
+  h3 {
+    height: 15px;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 5px 0px;
+  }
+}*/
+.block {
+  opacity: 50%;
+}
+.show {
+  display: flex;
+}
+.checked .card {
+  border: solid 1px #3cb3ab;
+}

@@ -16,15 +16,8 @@ export default function OptionCard({
   price,
 }) {
   return (
-    <div
-      className={`option-wrapper  ${
-        active === id && places > 0 ? "checked" : ""
-      } ${places === 0 ? "block" : ""}`}>
+    <div className={`option-wrapper  ${active === id ? "checked" : ""}`}>
       <Card>
-        <span className="people-num">
-          {places}
-          <span>left</span>
-        </span>
         <div className="description">
           <input
             checked={active === id}
@@ -36,10 +29,13 @@ export default function OptionCard({
           />
           <div className="info">
             <div className="info-head">
-              <h3>{title}</h3>
-              <span className="price">Pledge ${price} or more</span>
+              <h3>Pledge with no reward</h3>
             </div>
-            <p>{text}</p>
+            <p>
+              Choose to support us without a reward if you simply believe in our
+              project. As a backer, you will be signed up to receive product
+              updates via email.
+            </p>
           </div>
         </div>
         {active === id ? (

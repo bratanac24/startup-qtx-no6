@@ -3,13 +3,13 @@ import "./MainPage.scss";
 import Navbar from "../components/complex/navbar/Navbar";
 import MainContent from "../components/complex/main-content/MainContent";
 
-export default function MainPage() {
+export default function MainPage({ alert, setAlert }) {
   return (
     <main>
       <div className="banner">
         <Navbar />
       </div>
-      <MainContent />
+      <MainContent alert={alert} setAlert={setAlert} />
     </main>
   );
 }

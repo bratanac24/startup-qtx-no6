@@ -4,25 +4,26 @@ import React from "react";
 import Card from "../../simple/card/Card";
 import Button from "../../simple/buttons/Button";
 
-const Pledgecard = (props) => {
+const Pledgecard = ({ places, title, text, price, btn, alert, setAlert }) => {
   let dis = "";
-  if (props.places === 0) {
+  if (places === 0) {
     dis = "dis";
   }
   return (
     <div className={`pledge ${dis}`}>
       <Card>
         <div className="header">
-          <h3>{props.title}</h3>
-          <span className="price">Pledge ${props.price} or more</span>
+          <h3>{title}</h3>
+          <span className="price">Pledge ${price} or more</span>
         </div>
-        <p>{props.text}</p>
+        <p>{text}</p>
         <div className="foot">
           <span className="places">
-            {props.places}
+            {places}
             <p>left</p>
           </span>
-          <Button label={props.btn} places={props.places} />
+          {/* prettier-ignore */}
+          <Button label={btn} places={places} doThis={setAlert} value={true} />
         </div>
       </Card>
     </div>

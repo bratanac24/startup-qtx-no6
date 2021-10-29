@@ -9,7 +9,7 @@ import Button from "../../simple/buttons/Button";
 import Bookmark from "../../simple/buttons/Bookmark";
 import { ReactComponent as MainIcon } from "../../../assets/svg/logo-mastercraft.svg";
 
-export default function Stats() {
+export default function Stats({ setAlert }) {
   return (
     <Card>
       <MainIcon className="mastercraft" />
@@ -19,7 +19,10 @@ export default function Stats() {
         strain.
       </p>
       <div className="stats-btns">
-        <Button label="Back This Project"></Button>
+        <Button
+          label="Back This Project"
+          doThis={setAlert}
+          value={true}></Button>
         <Bookmark />
       </div>
     </Card>
