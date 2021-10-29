@@ -7,7 +7,7 @@ import Button from "../../simple/buttons/Button";
 const Pledgecard = ({ places, title, text, price, btn, alert, setAlert }) => {
   let dis = "";
   if (places === 0) {
-    dis = "dis";
+    dis = "cant-select";
   }
   return (
     <div className={`pledge ${dis}`}>
