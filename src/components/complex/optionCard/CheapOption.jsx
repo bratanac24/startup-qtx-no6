@@ -31,18 +31,18 @@ export default function OptionCard({
             <div className="info-head">
               <h3>Pledge with no reward</h3>
             </div>
-            <p>
-              Choose to support us without a reward if you simply believe in our
-              project. As a backer, you will be signed up to receive product
-              updates via email.
-            </p>
           </div>
         </div>
+        <p>
+          Choose to support us without a reward if you simply believe in our
+          project. As a backer, you will be signed up to receive product updates
+          via email.
+        </p>
         {active === id ? (
           <div className={`amount`}>
             <p>Enter your pledge</p>
             <div className="pledgeAmount">
-              <MoneyInput placeholder={price} />
+              <MoneyInput placeholder={2} />
               <Button label="Continue" doThis={setThanks} value={true} />
             </div>
           </div>

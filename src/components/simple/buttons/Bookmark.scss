@@ -25,3 +25,11 @@
     fill: #fff;
   }
 }
+
+@media screen and (max-width: 605px) {
+  .bookmark {
+    h3 {
+      display: none;
+    }
+  }
+}

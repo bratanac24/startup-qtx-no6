@@ -8,24 +8,29 @@ import OptionCards from "../optionCards/OptionCards";
 export default function Alert({ alert, setAlert }) {
   const [thanks, setThanks] = useState(false);
   return (
-    <div className="alert-wrapper">
-      {!thanks && alert ? (
-        <div className="alert">
-          <Close className="close" onClick={() => setAlert(false)} />
-          <h2>Back this project</h2>
-          <p>
-            Want to support us in bringing Mastercraft Bamboo Monitor Riser out
-            in the world?
-          </p>
-          <OptionCards
-            setThanks={setThanks}
-            setAlert={setAlert}
-            array={data.data}
-          />
-        </div>
-      ) : null}
+    <div>
+      <div className="background"></div>
+      <div className="alert-wrapper">
+        {!thanks && alert ? (
+          <div className="alert">
+            <Close className="close" onClick={() => setAlert(false)} />
+            <h2>Back this project</h2>
+            <p>
+              Want to support us in bringing Mastercraft Bamboo Monitor Riser
+              out in the world?
+            </p>
+            <OptionCards
+              setThanks={setThanks}
+              setAlert={setAlert}
+              array={data.data}
+            />
+          </div>
+        ) : null}
 
-      {thanks ? <ThanksCard setThanks={setThanks} /> : null}
+        {thanks ? (
+          <ThanksCard setAlert={setAlert} setThanks={setThanks} />
+        ) : null}
+      </div>
     </div>
   );
 }

@@ -21,26 +21,28 @@ export default function OptionCard({
         active === id && places > 0 ? "checked" : ""
       } ${places === 0 ? "block" : ""}`}>
       <Card>
-        <span className="people-num">
-          {places}
-          <span>left</span>
-        </span>
-        <div className="description">
-          <input
-            checked={active === id}
-            type="radio"
-            name="pledge"
-            className="radio"
-            disabled={places === 0}
-            onClick={() => setActive(id)}
-          />
-          <div className="info">
-            <div className="info-head">
-              <h3>{title}</h3>
-              <span className="price">Pledge ${price} or more</span>
+        <div className="card-liner">
+          <span className="people-num">
+            {places}
+            <span>left</span>
+          </span>
+          <div className="description">
+            <input
+              checked={active === id}
+              type="radio"
+              name="pledge"
+              className="radio"
+              disabled={places === 0}
+              onClick={() => setActive(id)}
+            />
+            <div className="info">
+              <div className="info-head">
+                <h3>{title}</h3>
+                <span className="price">Pledge ${price} or more</span>
+              </div>
             </div>
-            <p>{text}</p>
           </div>
+          <p>{text}</p>
         </div>
         {active === id ? (
           <div className={`amount`}>

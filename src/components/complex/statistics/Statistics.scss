@@ -30,11 +30,8 @@ progress[value]::-webkit-progress-value {
   line-height: 39px;
   font-weight: 700;
 }
-.left {
+.mid {
   border-right: solid 1px #0003;
-  padding-left: 0;
-}
-.right {
   border-left: solid 1px #0003;
 }
 .label {
@@ -42,4 +39,21 @@ progress[value]::-webkit-progress-value {
   line-height: 18px;
   font-weight: 400;
   color: #7a7a7a;
+}
+
+@media screen and (max-width: 650px) {
+  .numbers {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .number {
+    border: none;
+    padding: 20px 0;
+  }
+  .mid {
+    border: none;
+    border-bottom: solid 1px #0003;
+    border-top: solid 1px #0003;
+  }
 }

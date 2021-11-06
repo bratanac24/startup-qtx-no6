@@ -3,7 +3,7 @@ import "./ThanksCard.scss";
 import Button from "../../simple/buttons/Button";
 import React from "react";
 import { ReactComponent as CheckIcon } from "../../../assets/svg/icon-check.svg";
-export default function thanksCard({ setThanks }) {
+export default function thanksCard({ setThanks, setAlert }) {
   return (
     <div className="thanks-card">
       <CheckIcon />
@@ -13,7 +13,13 @@ export default function thanksCard({ setThanks }) {
         Monitor Riser worldwide. You will get an email once our campaign is
         completed.
       </p>
-      <Button label={"Got It!"} doThis={setThanks} value={false} />
+      <Button
+        label={"Got It!"}
+        doThis={setThanks}
+        value={false}
+        thisToo={setAlert}
+        value2={false}
+      />
     </div>
   );
 }

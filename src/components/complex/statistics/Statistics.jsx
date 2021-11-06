@@ -11,15 +11,15 @@ const Statistics = () => {
   return (
     <Card>
       <div className="numbers">
-        <div className="number left">
+        <div className="number">
           <span className="stats">${money.toLocaleString()}</span>
           <span className="label">of $100,000 backed</span>
         </div>
-        <div className="number">
+        <div className="number mid">
           <span className="stats">{people}</span>
           <span className="label">total backers</span>
         </div>
-        <div className="number right">
+        <div className="number">
           <span className="stats">{days}</span>
           <span className="label">days left</span>
         </div>

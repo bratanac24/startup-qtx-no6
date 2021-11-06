@@ -11,7 +11,6 @@ export default function Bookmark() {
     if (text === "Bookmark") setText("Bookmarked");
     else setText("Bookmark");
   }, [setIsCheck, isCheck, setText, text]);
-
   // prettier-ignore
   const bookMarkClass = cs('bookmark', { 'bookCheck': isCheck });
   return (

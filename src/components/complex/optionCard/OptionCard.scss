@@ -3,6 +3,9 @@
 *:after {
   box-sizing: border-box;
 }
+.card-liner {
+  position: relative;
+}
 .radio {
   padding: 10px;
   margin: 35px 28px;
@@ -44,6 +47,7 @@
 .info-head {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   h3 {
@@ -66,8 +70,8 @@
 }
 .people-num {
   position: absolute;
-  top: 30px;
-  right: 28px;
+  top: 0px;
+  right: 0px;
   color: #000;
   font-size: 18px;
   font-weight: 700;
@@ -88,11 +92,32 @@
   }
 }*/
 .block {
-  opacity: 50%;
+  opacity: 0.5;
 }
 .show {
   display: flex;
 }
 .checked .card {
   border: solid 1px #3cb3ab;
+}
+@media screen and (max-width: 630px) {
+  .amount {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .people-num {
+    left: 0px;
+    bottom: -10px;
+    top: auto;
+    right: auto;
+  }
+  p {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .amount {
+    margin: -25px;
+    margin-top: 30px;
+  }
 }

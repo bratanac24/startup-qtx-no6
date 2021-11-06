@@ -10,3 +10,8 @@
 .content-box {
   width: 730px;
 }
+@media screen and (max-width: 800px) {
+  .content-box {
+    width: 90%;
+  }
+}
