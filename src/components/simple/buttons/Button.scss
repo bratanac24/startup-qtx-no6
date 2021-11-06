@@ -1,0 +1,23 @@
+.btn {
+  border-radius: 100px;
+  border: none;
+  background-color: #147a73;
+  color: #fff;
+  padding: 0 35px;
+}
+.btn:hover {
+  background-color: #3cb3ab;
+}
+
+.btn:disabled {
+  background-color: #979797;
+}
+
+@media screen and (max-width: 450px) {
+  .btn {
+    padding: 0 25px;
+    h3 {
+      line-height: 15px;
+    }
+  }
+}

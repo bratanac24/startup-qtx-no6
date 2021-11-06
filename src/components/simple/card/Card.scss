@@ -1,0 +1,16 @@
+@use "../../../globalStyles/style";
+
+.card {
+  flex: auto;
+  padding: 48px;
+  background-color: #fff;
+  border: solid #2f2f2f20 1px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+@media screen and (max-width: 440px) {
+  .card {
+    padding: 25px;
+  }
+}

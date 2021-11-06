@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 166px;
+  height: 128px;
+  color: #fff;
+  font-size: 13pt;
+  font-weight: 500;
+}
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.menu-items div {
+  flex: auto;
+  padding: 10px;
+  margin: 10px;
+}
+.menu-items div:hover {
+  color: #444;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu-items {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .navbar {
+    align-items: center;
+  }
+}

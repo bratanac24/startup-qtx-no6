@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import "./App.scss";
+import MainPage from "./pages/MainPage";
+import Alert from "./components/complex/alert/Alert";
 function App() {
+  const [alert,setAlert]=useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {alert ? <Alert alert={alert} setAlert={setAlert}/> : null}
+      
+      <MainPage alert={alert} setAlert={setAlert} />
     </div>
   );
 }

@@ -1,0 +1,37 @@
+.pledge .card {
+  text-align: left;
+  padding: 20px 30px;
+}
+.price {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #3cb3ab;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.places {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  font-weight: 700;
+}
+.cant-select {
+  opacity: 0.5;
+}
+@media screen and (max-width: 450px) {
+}
